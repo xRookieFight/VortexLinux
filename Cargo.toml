@@ -1,0 +1,29 @@
+[package]
+name = "vortexlinux"
+version = "1.0.0"
+edition = "2024"
+rust-version = "1.88"
+description = "Run the Windows Vortex client and Studio on Linux through Wine or Proton"
+license = "MIT"
+repository = "https://github.com/xRookieFight/VortexLinux"
+readme = "README.md"
+keywords = ["wine", "proton", "vortex", "launcher", "linux"]
+categories = ["command-line-utilities", "games"]
+
+[profile.release]
+strip = true
+lto = true
+
+[dependencies]
+anyhow = "1.0.104"
+clap = { version = "4.6.7", features = ["derive"] }
+ico = "0.5.0"
+pelite = { version = "0.10.0", default-features = false, features = ["std"] }
+serde = { version = "1.0.229", features = ["derive"] }
+serde_json = "1.0.151"
+toml = "1.1.6"
+ureq = "3.4.2"
+zip = { version = "8.6.0", default-features = false, features = ["deflate"] }
+
+[dev-dependencies]
+tempfile = "3.27.0"

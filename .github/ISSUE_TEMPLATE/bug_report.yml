@@ -1,0 +1,36 @@
+name: Bug report
+description: Something doesn't work when running Vortex or Vortex Studio through VortexLinux
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you did, what you expected and what you got instead.
+    validations:
+      required: true
+  - type: textarea
+    id: doctor
+    attributes:
+      label: Output of `vortexlinux doctor`
+      render: text
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Vortex log
+      description: Newest file in `~/.local/share/vortexlinux/prefix/drive_c/users/$USER/AppData/Local/Vortex/logs` and `crash.log` if there is one. For Studio, the terminal output of `vortexlinux run --studio`.
+      render: text
+  - type: input
+    id: system
+    attributes:
+      label: Distro and GPU
+      placeholder: Fedora 44, Intel Arc A770
+    validations:
+      required: true
+  - type: input
+    id: runner
+    attributes:
+      label: Wine or Proton build and how you installed it
+      placeholder: wine 11.0 from dnf

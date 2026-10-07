@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Vortex game bugs
+    url: https://playvortex.io
+    about: Problems that also happen on Windows belong to the Vortex team, not here.
